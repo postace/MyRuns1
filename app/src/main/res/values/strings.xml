@@ -1,37 +1,33 @@
 <resources>
-    <string name="app_name">MyRuns1</string>
+    <string name="app_name">MyRuns Profile</string>
 
-    <!-- Title for fields -->
-    <string name="ui_user_photo_title">Profile photo: </string>
-    <string name="ui_user_photo_description">Your photo</string>
-    <string name="user_photo_file_name">profile.jpg</string>
+    <!-- Related to UI -->
+    <string name="ui_user_text_brief">Your profile: </string>
 
-    <string name="ui_button_snap">Snap</string>
+    <string name="user_avatar_photo_name">user_avatar.jpg</string>
+    <string name="ui_user_photo_description">Your avatar</string>
+    <string name="ui_button_capture">Capture</string>
 
     <string name="ui_user_name_title">Name: </string>
-    <string name="ui_user_name_hint">Your Name&#8230;</string>
-
+    <string name="ui_user_name_hint">Your name&#8230;</string>
     <string name="ui_user_email_title">Email: </string>
-    <string name="ui_user_email_hint">Your Email&#8230;</string>
-
+    <string name="ui_user_email_hint">Your email&#8230;</string>
     <string name="ui_user_phone_title">Phone: </string>
     <string name="ui_user_phone_hint">Your phone number&#8230;</string>
-
     <string name="ui_user_gender_title">Gender: </string>
     <string name="ui_user_gender_male">Male</string>
     <string name="ui_user_gender_female">Female</string>
 
     <string name="ui_user_class_title">Class: </string>
-    <string name="ui_user_class_hint">E.g, CS 50</string>
-
+    <string name="ui_user_class_hint">Class name, e.g, CS 193a</string>
     <string name="ui_user_major_title">Major: </string>
-    <string name="ui_user_major_hint">E.g, Computer Science</string>
+    <string name="ui_user_major_hint">Your major, e.g, computer science</string>
 
     <string name="ui_button_save">Save</string>
     <string name="ui_button_cancel">Cancel</string>
 
-    <!-- Preferences key name -->
-    <string name="pref_user_key">user_key</string>
+    <!-- Shared Preferences key -->
+    <string name="pref_user_data_key">user</string>
     <string name="pref_user_name_key">user_name</string>
     <string name="pref_user_email_key">user_email</string>
     <string name="pref_user_phone_key">user_phone</string>
@@ -39,6 +35,21 @@
     <string name="pref_user_class_key">user_class</string>
     <string name="pref_user_major_key">user_major</string>
 
+    <!-- Style for text view -->
+    <style name="text_view_style">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="edit_text_style">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
     <!-- Toast message -->
-    <string name="toast_saved">Your data is saved!</string>
+    <string name="toast_msg_no_activity">Sorry, no camera found</string>
+    <string name="toast_unknown_error">An error occurred, try again</string>
+    <string name="toast_data_saved">Your info has been saved!</string>
 </resources>
