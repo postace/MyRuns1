@@ -5,184 +5,160 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.postace.myruns1.MainActivity">
+    tools:context="com.postace.myruns1v2.MainActivity">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <TextView
+            style="@style/text_view_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_photo_title" />
+            android:text="@string/ui_user_text_brief"/>
 
         <LinearLayout
-            android:layout_margin="5dp"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/user_photo"
-                android:contentDescription="@string/ui_user_photo_description"
-                android:src="@drawable/sample"
+                android:id="@+id/user_avatar"
                 android:layout_width="0dp"
-                android:focusableInTouchMode="true"
+                android:layout_height="120dp"
+                android:layout_weight="3"
+                android:contentDescription="@string/ui_user_photo_description"
                 android:focusable="true"
-                android:layout_weight="1"
-                android:layout_height="100dp"/>
+                android:focusableInTouchMode="true"/>
 
             <Button
-                android:onClick="onSnapClicked"
-                android:id="@+id/btn_snap"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:text="@string/ui_button_snap"
-                android:layout_gravity="center_vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:onClick="onCaptureClicked"
+                android:text="@string/ui_button_capture"/>
         </LinearLayout>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_name_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_name_title"/>
 
         <EditText
-            android:id="@+id/text_name"
-            android:layout_margin="5dp"
-            android:maxLines="1"
-            android:inputType="text"
+            android:id="@+id/user_name_input"
+            style="@style/edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/ui_user_name_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:inputType="text"/>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_email_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_email_title"/>
 
         <EditText
-            android:id="@+id/text_email"
-            android:layout_margin="5dp"
-            android:maxLines="1"
-            android:inputType="textEmailAddress"
+            android:id="@+id/user_email_input"
+            style="@style/edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:hint="@string/ui_user_email_hint"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:inputType="textEmailAddress"/>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_phone_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_phone_title"/>
 
         <EditText
-            android:id="@+id/text_phone_number"
-            android:layout_margin="5dp"
-            android:maxLines="1"
-            android:inputType="phone"
-            android:hint="@string/ui_user_phone_hint"
+            android:id="@+id/user_phone_input"
+            style="@style/edit_text_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="@string/ui_user_phone_hint"
+            android:inputType="phone"/>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_gender_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_gender_title"/>
 
         <RadioGroup
-            android:id="@+id/radioGender"
-            android:layout_margin="5dp"
-            android:orientation="horizontal"
+            android:id="@+id/user_gender"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <RadioButton
-                android:id="@+id/radio_gender_M"
-                android:layout_width="wrap_content"
+                style="@style/edit_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ui_user_gender_male"
-                android:layout_height="wrap_content"/>
+                android:text="@string/ui_user_gender_male"/>
 
             <RadioButton
-                android:id="@+id/radio_gender_F"
-                android:layout_width="wrap_content"
+                style="@style/edit_text_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/ui_user_gender_female"
-                android:layout_height="wrap_content"/>
+                android:text="@string/ui_user_gender_female"/>
         </RadioGroup>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_class_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_class_title"/>
 
         <EditText
-            android:id="@+id/text_class"
-            android:layout_margin="5dp"
-            android:maxLines="1"
-            android:inputType="text"
-            android:hint="@string/ui_user_class_hint"
+            android:id="@+id/user_class_input"
+            style="@style/edit_text_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="@string/ui_user_class_hint"
+            android:inputType="text"/>
 
         <TextView
-            android:layout_margin="5dp"
-            android:text="@string/ui_user_major_title"
-            android:textSize="20sp"
-            android:textColor="@android:color/black"
+            style="@style/text_view_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="@string/ui_user_major_title"/>
 
         <EditText
-            android:id="@+id/text_major"
-            android:layout_margin="5dp"
-            android:maxLines="1"
-            android:inputType="text"
-            android:hint="@string/ui_user_major_hint"
+            android:id="@+id/user_major_input"
+            style="@style/edit_text_style"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:hint="@string/ui_user_major_hint"
+            android:inputType="text"/>
 
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="5dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <Button
-                android:layout_margin="5dp"
-                android:id="@+id/btn_save"
-                android:text="@string/ui_button_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
                 android:onClick="onSaveClicked"
-                android:layout_width="wrap_content"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"/>
+                android:text="@string/ui_button_save"/>
 
             <Button
-                android:onClick="onCancelClicked"
-                android:layout_margin="5dp"
-                android:id="@+id/btn_cancel"
-                android:layout_weight="1"
-                android:text="@string/ui_button_cancel"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:onClick="onCancelClicked"
+                android:text="@string/ui_button_cancel"/>
         </LinearLayout>
     </LinearLayout>
 
